@@ -31,6 +31,10 @@
     <%= form.text_field :url_image %>
   </div>
 
+  <div class="field">
+    <%= form.label :product_type_id %>
+    <%= form.select :product_type_id, ProductType.all.collect{|type| [type.description, type.id]} %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
